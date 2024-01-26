@@ -7,9 +7,7 @@ function NavBar() {
     const navigate = useNavigate();
     const {isAuth, logOut, logIn} = useContext(AuthContext)
 
-    useEffect(() => {
-        console.log(isAuth)
-    }, [isAuth]);
+
 
     return (
         <nav>
@@ -26,7 +24,7 @@ function NavBar() {
 
                     <button
                         type="button"
-                        onClick={() => logIn()}
+                        onClick={() => navigate("/signin")}
                     >
 
                         Log in

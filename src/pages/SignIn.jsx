@@ -24,13 +24,13 @@ function SignIn() {
                 password:password,
             })
             console.log("response", response)
-            const token = response.data.accessToken
-            logIn(email, password, token)
+            // const token = response.data.accessToken
+            logIn(email, password, response.data.accessToken)
 
         } catch (e){
             console.error(e)
         }finally {
-            navigate('/profile')
+            console.log("postLogIn complete")
         }
     }
 

@@ -24,8 +24,8 @@ function SignUp() {
                 password:password
             })
             console.log("Response", response.data)
-        }catch (error){
-            console.log(error.message)
+        }catch (e){
+            console.error(e)
         } finally{
             navigate("/signin")
         }
